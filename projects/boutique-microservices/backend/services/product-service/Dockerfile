@@ -1,4 +1,4 @@
-# Auth Service Dockerfile
+# Product Service Dockerfile
 FROM node:20-alpine AS builder
 
 WORKDIR /app
@@ -35,8 +35,10 @@ ENV DB_HOST=postgres \
     DB_PASSWORD=postgres123 \
     DB_NAME=auth_db
 
+
 USER nodejs
 
-EXPOSE 3002
+
+EXPOSE 3003
 
 CMD ["node", "dist/index.js"]

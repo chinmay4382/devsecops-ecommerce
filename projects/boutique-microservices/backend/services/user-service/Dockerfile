@@ -1,4 +1,4 @@
-# Auth Service Dockerfile
+# User Service Dockerfile
 FROM node:20-alpine AS builder
 
 WORKDIR /app
@@ -37,6 +37,6 @@ ENV DB_HOST=postgres \
 
 USER nodejs
 
-EXPOSE 3002
+EXPOSE 3006
 
 CMD ["node", "dist/index.js"]
